@@ -4,73 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_degradado"
     tools:context=".MainActivity">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/logo"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="140dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
-        app:srcCompat="@drawable/recortada" />
-
-    <TextView
-        android:id="@+id/nombreAplicacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/nombreApp"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_graph"/>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="500dp"
-        app:layout_constraintTop_toBottomOf="@+id/nombreAplicacion"
-        app:layout_constraintBottom_toBottomOf="parent">
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:backgroundTint="@color/blue_200"
-            android:text="Log in"
-            app:cornerRadius="30dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_login"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:scrollbars="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don't have an account?"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sign up"
-                android:textColor="@color/blue_200"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
