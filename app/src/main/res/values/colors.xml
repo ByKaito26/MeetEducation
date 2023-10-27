@@ -7,5 +7,6 @@
     <color name="purple_dark">#520EB3</color>
     <color name="purple_medium">#7824D1</color>
     <color name="blue_200">#46B9D2</color>
-
+    <color name="background_gray">#EFEFEF</color>
+    <color name="blue_90">#A4CED8</color>
 </resources>
