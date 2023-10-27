@@ -3,4 +3,12 @@
     <string name="nombreApp">Meet Education</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_app2">Meet Education</string>
+    <string name="back">Back</string>
+    <string name="later">Later</string>
+    <string name="nombre">Nombre</string>
+    <string name="email">E-mail</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
 </resources>
