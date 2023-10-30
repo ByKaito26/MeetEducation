@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_gray"
     tools:context=".RegisterFragment">
 
     <View
@@ -114,6 +115,7 @@
                 android:minHeight="48dp"
                 android:paddingTop="20dp"
                 android:backgroundTint="@color/purple_medium"/>
+
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
                 android:layout_width="220dp"
@@ -127,7 +129,8 @@
                 android:layout_width="220dp"
                 android:layout_height="70dp"
                 android:hint="@string/username"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:backgroundTint="@color/purple_medium"/>
 
             <EditText
                 android:id="@+id/editTextTextPassword"
