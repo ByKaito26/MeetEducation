@@ -9,23 +9,49 @@
         android:id="@+id/registerFragment"
         android:name="com.example.meeteducation.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_registerStudentFragment"
+            app:destination="@id/registerStudentFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.meeteducation.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerStudentFragment"
+            app:destination="@id/registerStudentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/inicioFragment"
         android:name="com.example.meeteducation.InicioFragment"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_inicioFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_inicioFragment_to_registerStudentFragment"
+            app:destination="@id/registerStudentFragment" />
         <action
             android:id="@+id/action_inicioFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerStudentFragment"
+        android:name="com.example.meeteducation.RegisterStudentFragment"
+        android:label="fragment_register_student"
+        tools:layout="@layout/fragment_register_student" >
+        <action
+            android:id="@+id/action_registerStudentFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_registerStudentFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
 
 </navigation>

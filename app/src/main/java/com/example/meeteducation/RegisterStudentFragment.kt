@@ -6,25 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.meeteducation.databinding.FragmentRegisterBinding
+import com.example.meeteducation.databinding.FragmentRegisterStudentBinding
 
-class RegisterFragment : Fragment() {
+class RegisterStudentFragment : Fragment() {
 
-    private var _binding: FragmentRegisterBinding? = null
+    private var _binding: FragmentRegisterStudentBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentRegisterBinding.inflate(inflater,container,false)
+        _binding = FragmentRegisterStudentBinding.inflate(inflater,container,false)
 
-        binding.btnStudent.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_registerStudentFragment)
+        binding.btnTeacher.setOnClickListener {
+            findNavController().navigate(R.id.action_registerStudentFragment_to_registerFragment)
         }
         binding.back.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_inicioFragment)
+            findNavController().navigate(R.id.action_registerStudentFragment_to_inicioFragment)
         }
+
 
         return binding.root
     }

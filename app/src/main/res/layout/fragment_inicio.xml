@@ -44,10 +44,12 @@
         <Button
             android:id="@+id/btn_login"
             android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_height="70dp"
             android:backgroundTint="@color/blue_200"
-            android:text="Log in"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
             app:cornerRadius="30dp" />
 
         <LinearLayout
@@ -63,15 +65,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account?  "
+                android:text="@string/dont_have_account"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginEnd="8dp" />
 
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign up"
+                android:text="@string/sign_up"
                 android:textColor="@color/blue_200"
                 android:textSize="15sp" />
         </LinearLayout>
