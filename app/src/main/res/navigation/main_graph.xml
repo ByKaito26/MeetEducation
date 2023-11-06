@@ -28,6 +28,10 @@
         <action
             android:id="@+id/action_loginFragment_to_registerStudentFragment"
             app:destination="@id/registerStudentFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_dahboardFragment"
+            app:destination="@id/dahboardFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/inicioFragment"
@@ -53,5 +57,10 @@
             android:id="@+id/action_registerStudentFragment_to_inicioFragment"
             app:destination="@id/inicioFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/dahboardFragment"
+        android:name="com.example.meeteducation.DahboardFragment"
+        android:label="fragment_dahboard"
+        tools:layout="@layout/fragment_dahboard" />
 
 </navigation>
