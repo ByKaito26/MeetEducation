@@ -29,8 +29,8 @@
             android:id="@+id/action_loginFragment_to_registerStudentFragment"
             app:destination="@id/registerStudentFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_dahboardFragment"
-            app:destination="@id/dahboardFragment"
+            android:id="@+id/action_loginFragment_to_dashboard_student_fragment"
+            app:destination="@id/dashboardStudentFragment"
             app:popUpToInclusive="false"/>
     </fragment>
     <fragment
@@ -57,10 +57,11 @@
             android:id="@+id/action_registerStudentFragment_to_inicioFragment"
             app:destination="@id/inicioFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/dahboardFragment"
-        android:name="com.example.meeteducation.DahboardFragment"
-        android:label="fragment_dahboard"
-        tools:layout="@layout/fragment_dahboard" />
+        android:id="@+id/dashboardStudentFragment"
+        android:name="com.example.meeteducation.DashboardStudentFragment"
+        android:label="fragment_dashboard_student"
+        tools:layout="@layout/fragment_dashboard_student" />
 
 </navigation>
