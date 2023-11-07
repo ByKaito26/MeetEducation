@@ -1,6 +1,7 @@
 package com.example.meeteducation
 
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,25 @@ class InicioFragment : Fragment() {
             findNavController().navigate(R.id.action_inicioFragment_to_registerStudentFragment)
         }
         return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Disable the native back button functionality
+        setupBackPressListener()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    // Disable the native back button functionality
+    private fun setupBackPressListener() {
+        this.view?.isFocusableInTouchMode = true
+        this.view?.requestFocus()
+        this.view?.setOnKeyListener { _, keyCode, _ ->
+            keyCode == KeyEvent.KEYCODE_BACK
+        }
     }
 
 
