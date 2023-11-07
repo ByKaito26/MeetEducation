@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context=".DashboardStudentFragment"
-    tools:ignore="SpeakableTextPresentCheck">
+    android:background="@color/background_gray"
+    tools:context=".DashboardStudentFragment">
 
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+<LinearLayout
         android:id="@+id/verticalLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
         android:orientation="vertical">
 
-        <!-- Aquí agregarás los elementos LinearLayout horizontales y los rectángulos -->
+    <TextView
+        android:id="@+id/textMathsDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:text="@string/TextMaths" />
 
-        <HorizontalScrollView
+    <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="SpeakableTextPresentCheck">
@@ -44,7 +79,8 @@
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:src="@drawable/linear_equations"
-                    tools:ignore="ContentDescription" />
+                    tools:ignore="ContentDescription"
+                    android:tooltipText="linear equations"/>
 
                 <ImageView
                     android:id="@+id/MathClass3"
@@ -76,6 +112,15 @@
 
             </LinearLayout>
         </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textHistoryDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:text="@string/TextHistory" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -136,6 +181,15 @@
 
         </LinearLayout>
         </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textLanguagesDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:text="@string/TextLanguages" />
 
          <HorizontalScrollView
              android:layout_width="match_parent"
@@ -200,7 +254,14 @@
          </LinearLayout>
          </HorizontalScrollView>
 
-
+    <TextView
+        android:id="@+id/textPhysicsDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:text="@string/TextPhysics" />
 
      <HorizontalScrollView
          android:layout_width="match_parent"
@@ -266,5 +327,6 @@
 
     </LinearLayout>
 
-
 </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
