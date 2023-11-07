@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".DashboardStudentFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+
+    <LinearLayout
+        android:id="@+id/verticalLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- Aquí agregarás los elementos LinearLayout horizontales y los rectángulos -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/MathClass1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/linear_equations"
+                    tools:ignore="ContentDescription,Suspicious0dp" />
+
+                <ImageView
+                    android:id="@+id/MathClass2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/linear_equations"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/MathClass3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/linear_equations"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/MathClass4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/linear_equations"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/MathClass5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/linear_equations"
+                    tools:ignore="ContentDescription" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/HistoryClass1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/history"
+                tools:ignore="ContentDescription,Suspicious0dp" />
+
+            <ImageView
+                android:id="@+id/HistoryClass2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/history"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/HistoryClass3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/history"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/HistoryClass4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/history"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/HistoryClass5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/history"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+        </HorizontalScrollView>
+
+         <HorizontalScrollView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             tools:ignore="SpeakableTextPresentCheck">
+
+         <LinearLayout
+           android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+             android:orientation="horizontal">
+
+
+             <ImageView
+                 android:id="@+id/LanguageClass1"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="10dp"
+                 android:src="@drawable/language"
+                 tools:ignore="ContentDescription,Suspicious0dp" />
+
+             <ImageView
+                 android:id="@+id/LanguageClass2"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="10dp"
+                 android:layout_weight="1"
+                 android:src="@drawable/language"
+                 tools:ignore="ContentDescription" />
+
+
+             <ImageView
+                 android:id="@+id/LanguageClass3"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="10dp"
+                 android:layout_weight="1"
+                 android:src="@drawable/language"
+                 tools:ignore="ContentDescription" />
+
+             <ImageView
+                 android:id="@+id/LanguageClass4"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="10dp"
+                 android:layout_weight="1"
+                 android:src="@drawable/language"
+                 tools:ignore="ContentDescription" />
+
+             <ImageView
+                 android:id="@+id/LanguageClass5"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="10dp"
+                 android:layout_weight="1"
+                 android:src="@drawable/language"
+                 tools:ignore="ContentDescription" />
+
+
+
+
+         </LinearLayout>
+         </HorizontalScrollView>
+
+
+
+     <HorizontalScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/PhysicsClass1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/relativity"
+            tools:ignore="ContentDescription,Suspicious0dp" />
+
+
+        <ImageView
+            android:id="@+id/PhysicsClass2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/relativity"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/PhysicsClass3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/relativity"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/PhysicsClass4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/relativity"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/PhysicsClass5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/relativity"
+            tools:ignore="ContentDescription" />
+
+
+
+</LinearLayout>
+</HorizontalScrollView>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

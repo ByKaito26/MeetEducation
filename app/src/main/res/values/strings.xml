@@ -24,5 +24,12 @@
     <string name="login">Login</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="sign_up">Sign up</string>
-    <string name="welcome2">Welcome</string>
+    <string name="interested">What are you interested in?</string>
+    <string name="rectangle">TODO</string>
+    <string name="TextMaths">Maths\n</string>
+    <string name="TextPhysics">Physics\n</string>
+    <string name="TextChemistry">Chemistry\n</string>
+    <string name="TextHistory">History\n</string>
+    <string name="TextBiology">Biology\n</string>
+    <string name="TextLanguages">Languages\n</string>
 </resources>
