@@ -62,6 +62,19 @@
         android:id="@+id/dashboardStudentFragment"
         android:name="com.example.meeteducation.DashboardStudentFragment"
         android:label="fragment_dashboard_student"
-        tools:layout="@layout/fragment_dashboard_student" />
+        tools:layout="@layout/fragment_dashboard_student" >
+        <action
+            android:id="@+id/action_dashboardStudentFragment_to_informationCourseFragment"
+            app:destination="@id/informationCourseFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/informationCourseFragment"
+        android:name="com.example.meeteducation.InformationCourseFragment"
+        android:label="fragment_information_course"
+        tools:layout="@layout/fragment_information_course">
+
+    </fragment>
+
 
 </navigation>
