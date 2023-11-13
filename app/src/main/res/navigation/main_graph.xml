@@ -29,9 +29,8 @@
             android:id="@+id/action_loginFragment_to_registerStudentFragment"
             app:destination="@id/registerStudentFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_dashboard_student_fragment"
-            app:destination="@id/dashboardStudentFragment"
-            app:popUpToInclusive="false"/>
+            android:id="@+id/action_loginFragment_to_studentInterestsFragment"
+            app:destination="@id/studentInterestsFragment" />
     </fragment>
     <fragment
         android:id="@+id/inicioFragment"
@@ -74,6 +73,15 @@
         android:label="fragment_information_course"
         tools:layout="@layout/fragment_information_course">
 
+    </fragment>
+    <fragment
+        android:id="@+id/studentInterestsFragment"
+        android:name="com.example.meeteducation.StudentInterestsFragment"
+        android:label="fragment_student_interests"
+        tools:layout="@layout/fragment_student_interests" >
+        <action
+            android:id="@+id/action_studentInterestsFragment_to_dashboardStudentFragment"
+            app:destination="@id/dashboardStudentFragment" />
     </fragment>
 
 

@@ -36,12 +36,7 @@ class DahboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentDahboardBinding.inflate(inflater, container,false)
-        lifecycleScope.launch {
-            val users = userDao.getAll()
-            for (user in users) {
-                println("${user.id}. ${user.email}, ${user.rol}, ${user.password}, ${user.user}")
-            }
-        }
+
         return binding.root
     }
 

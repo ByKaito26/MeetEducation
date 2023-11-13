@@ -71,11 +71,21 @@ class LoginFragment : Fragment() {
                 // Check if the user exist
                 if (user != null) {
                     //println("user: ${user.user} and password: ${user.password}")
-                    editor?.putString("user", user.user)
-                    editor?.putInt("userId", user.id)
+                    editor?.putString("username", user.username)
                     editor?.apply()
                     // Navigate
-                    findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToDashboardStudentFragment())
+                    /*if(user.rol.equals("Teacher", ignoreCase = true)){
+                        findNavController().navigate(
+                            //LoginFragmentDirections.action
+                        )
+                    }else if(user.rol.equals("Student", ignoreCase = true)){
+                        findNavController().navigate(
+                            LoginFragmentDirections.actionLoginFragmentToStudentInterestsFragment()
+                        )
+                    }
+
+                    */
+
 
                 }else {
                     Snackbar.make(view, R.string.ini_error_user_password, Snackbar.LENGTH_SHORT).show()
