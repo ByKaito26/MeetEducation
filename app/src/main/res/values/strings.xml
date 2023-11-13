@@ -32,4 +32,10 @@
     <string name="TextHistory">History\n</string>
     <string name="TextBiology">Biology\n</string>
     <string name="TextLanguages">Languages\n</string>
+    <string name="beginDashboard">Begin</string>
+    <string name="uploadDashboard">Upload</string>
+    <string name="editDashboard">Edit</string>
+    <string name="Title">Title</string>
+    <string name="upload_files">Upload Files</string>
+    <string name="upload">Upload</string>
 </resources>

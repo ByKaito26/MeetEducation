@@ -71,7 +71,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:src="@drawable/linear_equations"
-                    tools:ignore="ContentDescription"
+                    tools:ignore="ContentDescription,UnusedAttribute"
                     android:tooltipText="linear equations"/>
 
                 <ImageView
@@ -328,5 +328,17 @@
     </LinearLayout>
 
 </ScrollView>
+
+    <ImageView
+        android:id="@+id/buscadorStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:src="@drawable/group_26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
