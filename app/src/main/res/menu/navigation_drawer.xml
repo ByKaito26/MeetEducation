@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_btn_saved"
+            android:title="Saved"
+            android:icon="@drawable/baseline_archive_24"/>
+        <item
+            android:id="@+id/nav_btn_config"
+            android:title="Configuration"
+            android:icon="@drawable/baseline_settings"/>
+        <item
+            android:id="@+id/nav_btn_help"
+            android:title="Help"
+            android:icon="@drawable/baseline_help_24"/>
+        <item
+            android:id="@+id/nav_btn_logout"
+            android:title="Logout"
+            android:icon="@drawable/baseline_logout_24"/>
+
+    </group>
+
+    <item android:title="social">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_notification"
+                    android:title="Notification"
+                    android:icon="@drawable/baseline_notifications_24"></item>
+                <item
+                android:id="@+id/nav_contact"
+                android:title="Contact"
+                android:icon="@drawable/baseline_contacts_24"/>
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">MeetEducation</string>
     <string name="nombreApp">Meet Education</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nombre_app2">Meet Education</string>
     <string name="back">Back</string>
@@ -11,7 +10,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="register">Register</string>
-    <string name="ini_error_user_password">Error: Usuario y/o contraseña incorrecta. Por favor intente de nuevo.</string>
+    <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -24,18 +23,9 @@
     <string name="login">Login</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="sign_up">Sign up</string>
-    <string name="interested">What are you interested in?</string>
-    <string name="rectangle">TODO</string>
-    <string name="TextMaths">Maths\n</string>
-    <string name="TextPhysics">Physics\n</string>
-    <string name="TextChemistry">Chemistry\n</string>
-    <string name="TextHistory">History\n</string>
-    <string name="TextBiology">Biology\n</string>
-    <string name="TextLanguages">Languages\n</string>
-    <string name="beginDashboard">Begin</string>
-    <string name="uploadDashboard">Upload</string>
-    <string name="editDashboard">Edit</string>
-    <string name="Title">Title</string>
-    <string name="upload_files">Upload Files</string>
-    <string name="upload">Upload</string>
+    <string name="welcome2">Welcome</string>
+    <string name="ini_error_user_password">Error: Usuario y/o contraseña incorrecta. Por favor intente de nuevo.</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
 </resources>
