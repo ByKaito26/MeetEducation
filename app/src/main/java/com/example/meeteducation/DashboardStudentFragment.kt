@@ -21,11 +21,14 @@ class DashboardStudentFragment : Fragment() {
     ): View? {
         _binding = FragmentDashboardStudentBinding.inflate(inflater, container, false)
 
-        binding.MathClass2.setOnClickListener {
-            findNavController().navigate(R.id.action_studentInterestsFragment3_to_dashboardStudentFragment)
-        }
-
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.MathClass2.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardStudentFragment_to_informationCourseFragment)
+        }
     }
 
 
