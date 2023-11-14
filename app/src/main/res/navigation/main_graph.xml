@@ -29,8 +29,11 @@
             android:id="@+id/action_loginFragment_to_registerStudentFragment"
             app:destination="@id/registerStudentFragment" />
         <action
+            android:id="@+id/action_loginFragment_to_dahboardFragment"
+            app:destination="@id/dahboardFragment" />
+        <action
             android:id="@+id/action_loginFragment_to_studentInterestsFragment"
-            app:destination="@id/studentInterestsFragment" />
+            app:destination="@id/studentInterestsFragment3" />
     </fragment>
     <fragment
         android:id="@+id/inicioFragment"
@@ -65,24 +68,50 @@
         <action
             android:id="@+id/action_dashboardStudentFragment_to_informationCourseFragment"
             app:destination="@id/informationCourseFragment" />
-
+    </fragment>
+    <fragment
+        android:id="@+id/dahboardFragment"
+        android:name="com.example.meeteducation.DahboardFragment"
+        android:label="fragment_dahboard"
+        tools:layout="@layout/fragment_dahboard" >
+        <action
+            android:id="@+id/action_dahboardFragment_to_uploadDashboardTeacherFragment"
+            app:destination="@id/uploadDashboardTeacherFragment" />
+        <argument
+            android:name="user"
+            app:argType="string"
+            android:defaultValue="Desconocido"/>
+        <action
+            android:id="@+id/action_dahboardFragment_to_informationCourseFragment"
+            app:destination="@id/informationCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadDashboardTeacherFragment"
+        android:name="com.example.meeteducation.UploadDashboardTeacherFragment"
+        android:label="fragment_upload_dashboard_teacher"
+        tools:layout="@layout/fragment_upload_dashboard_teacher" >
+        <action
+            android:id="@+id/action_uploadDashboardTeacherFragment_to_dahboardFragment"
+            app:destination="@id/dahboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/informationCourseFragment"
         android:name="com.example.meeteducation.InformationCourseFragment"
         android:label="fragment_information_course"
-        tools:layout="@layout/fragment_information_course">
-
-    </fragment>
+        tools:layout="@layout/fragment_information_course" />
     <fragment
-        android:id="@+id/studentInterestsFragment"
+        android:id="@+id/studentInterestsFragment3"
         android:name="com.example.meeteducation.StudentInterestsFragment"
         android:label="fragment_student_interests"
         tools:layout="@layout/fragment_student_interests" >
         <action
-            android:id="@+id/action_studentInterestsFragment_to_dashboardStudentFragment"
+            android:id="@+id/action_studentInterestsFragment3_to_dashboardStudentFragment"
             app:destination="@id/dashboardStudentFragment" />
-    </fragment>
+        <argument
+            android:name="user"
+            app:argType="string"
+            android:defaultValue="Desconocido"/>
 
+    </fragment>
 
 </navigation>

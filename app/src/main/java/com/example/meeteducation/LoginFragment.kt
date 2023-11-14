@@ -3,11 +3,10 @@ package com.example.meeteducation
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.meeteducation.database.AppDatabase
@@ -71,20 +70,32 @@ class LoginFragment : Fragment() {
                 // Check if the user exist
                 if (user != null) {
                     //println("user: ${user.user} and password: ${user.password}")
-                    editor?.putString("username", user.username)
+                    editor?.putString("user", user.user)
                     editor?.apply()
-                    // Navigate
-                    /*if(user.rol.equals("Teacher", ignoreCase = true)){
-                        findNavController().navigate(
-                            //LoginFragmentDirections.action
-                        )
-                    }else if(user.rol.equals("Student", ignoreCase = true)){
-                        findNavController().navigate(
-                            LoginFragmentDirections.actionLoginFragmentToStudentInterestsFragment()
-                        )
-                    }
 
-                    */
+                    when {
+                        user.rol.equals("Student", ignoreCase = true) -> {
+                            findNavController().navigate(
+                                LoginFragmentDirections.actionLoginFragmentToStudentInterestsFragment(
+                                    user = user.username
+                                )
+                            )
+                        }
+
+                        user.rol.equals("Teacher", ignoreCase = true) -> {
+                            findNavController().navigate(
+                                LoginFragmentDirections.actionLoginFragmentToDahboardFragment(user = user.username)
+                            )
+                        }
+
+                        else -> {
+                            Snackbar.make(
+                                view,
+                                R.string.ini_error_user_password,
+                                Snackbar.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
 
 
                 }else {
@@ -97,3 +108,8 @@ class LoginFragment : Fragment() {
 
 
 }
+
+
+/*
+
+ */

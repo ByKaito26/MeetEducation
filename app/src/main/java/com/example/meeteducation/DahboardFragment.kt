@@ -1,16 +1,15 @@
 package com.example.meeteducation
 
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.MenuProvider
-import androidx.lifecycle.lifecycleScope
-import com.example.meeteducation.database.AppDatabase
-import com.example.meeteducation.database.user.UserDao
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.meeteducation.databinding.FragmentDahboardBinding
-import kotlinx.coroutines.launch
 
 class DahboardFragment : Fragment() {
 
@@ -20,24 +19,44 @@ class DahboardFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var root: View
 
-    private val database: AppDatabase by lazy{
-        AppDatabase.getDatabase(requireActivity().baseContext)
-    }
+    val args: DahboardFragmentArgs by navArgs()
 
-    private lateinit var userDao: UserDao
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Create the userDao from Database
-        userDao = database.UserDao()
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentDahboardBinding.inflate(inflater, container,false)
 
+
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupBackPressListener()
+        val sharedPreferences = context?.getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE)
+        val user = sharedPreferences?.getString("user", "Desconocido")
+
+        binding.txtNombreUsuario.text = user
+
+        binding.uploadTextView.setOnClickListener {
+            findNavController().navigate(R.id.action_dahboardFragment_to_uploadDashboardTeacherFragment)
+        }
+        binding.MathClass2Teacher.setOnClickListener {
+            findNavController().navigate(R.id.action_dahboardFragment_to_informationCourseFragment)
+        }
+
+    }
+
+    private fun setupBackPressListener() {
+        this.view?.isFocusableInTouchMode = true
+        this.view?.requestFocus()
+        this.view?.setOnKeyListener { _, keyCode, _ ->
+            keyCode == KeyEvent.KEYCODE_BACK
+        }
     }
 
 

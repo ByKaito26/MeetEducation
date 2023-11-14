@@ -1,6 +1,5 @@
 package com.example.meeteducation
 
-import AppDatabaseStars
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.example.meeteducation.database.likes.LikeDao
-import com.example.meeteducation.database.likes.likes
+import com.example.meeteducation.database.AppDatabase
+import com.example.meeteducation.database.user.UserDao
 import com.example.meeteducation.databinding.FragmentInformationCourseBinding
 import kotlinx.coroutines.launch
 
@@ -20,16 +19,19 @@ class InformationCourseFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    private val databaseStars: AppDatabaseStars by lazy {
-        AppDatabaseStars.getDatabase(requireActivity().baseContext)
+    private lateinit var root: View
+
+    private val database: AppDatabase by lazy{
+        AppDatabase.getDatabase(requireActivity().baseContext)
     }
 
-    private lateinit var likeDao: LikeDao
-
+    private lateinit var userDao: UserDao
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        likeDao = databaseStars.likeDao()
+        // Create the userDao from Database
+        userDao = database.UserDao()
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,27 +42,5 @@ class InformationCourseFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.imgLike.setOnClickListener{
-            lifecycleScope.launch {
-                val like = 1
-                val likeToInsert = likes(0,like)
-                binding.numLikes.text = likeDao.getLikesCount().toString()
-
-            }
-        }
-        binding.imgDislike.setOnClickListener{
-            lifecycleScope.launch {
-                val like = 0
-                val likeToInsert = likes(0,like)
-                var dislikes = likeDao.getVotosCount() - likeDao.getLikesCount()
-                binding.numDislikes.text = dislikes.toString()
-            }
-        }
-
-
-    }
 
 }
