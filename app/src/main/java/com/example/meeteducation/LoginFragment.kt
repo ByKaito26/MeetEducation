@@ -73,6 +73,8 @@ class LoginFragment : Fragment() {
                     editor?.putString("user", user.user)
                     editor?.apply()
 
+                    //Por feo
+
                     when {
                         user.rol.equals("Student", ignoreCase = true) -> {
                             findNavController().navigate(
