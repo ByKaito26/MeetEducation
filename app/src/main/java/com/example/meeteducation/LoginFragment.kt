@@ -72,11 +72,9 @@ class LoginFragment : Fragment() {
                 if (user != null) {
                     //println("user: ${user.user} and password: ${user.password}")
                     editor?.putString("user", user.user)
-                    editor?.putInt("userId", user.id)
                     editor?.apply()
                     // Navigate
                     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToDashboardStudentFragment())
-
                 }else {
                     Snackbar.make(view, R.string.ini_error_user_password, Snackbar.LENGTH_SHORT).show()
                 }
